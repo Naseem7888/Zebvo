@@ -211,6 +211,29 @@ h1 {
   border: 0;
   color: var(--text);
   outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Ensure native select dropdown options are readable on dark backgrounds */
+select {
+  color: var(--text);
+  background: var(--panel-soft);
+  border-radius: 12px;
+}
+
+select option {
+  color: var(--text);
+  background: var(--panel);
+}
+
+/* Remove default Windows arrow for a cleaner look where supported */
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  outline: 2px solid rgba(104, 209, 255, 0.12);
 }
 
 .toolbar__filters {
